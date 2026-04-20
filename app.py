@@ -244,7 +244,7 @@ st.markdown("""
 </style>
 """, unsafe_allow_html=True)
 
-st.markdown('<div class="main-header">🤖 Bharat Travel Concierge</div>', unsafe_allow_html=True)
+st.markdown('<div class="main-header">🤖 Bharat Yatra Sahayak</div>', unsafe_allow_html=True)
 st.markdown('<div class="sub-header">Your AI guide to 28 Indian states with real-time budget calculation</div>', unsafe_allow_html=True)
 
 try:
