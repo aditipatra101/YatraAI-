@@ -206,105 +206,41 @@ st.set_page_config(page_title=DOMAIN_NAME, page_icon="🤖", layout="wide")
 # Custom CSS for better styling
 st.markdown("""
 <style>
-
-/* 🌑 Full Black Background */
-.stApp {
-    background-color: #000000;
-    color: #ffffff;
-    font-family: 'Segoe UI', sans-serif;
-}
-
-/* 🔥 Header */
-.main-header {
-    text-align: center;
-    font-size: 3em;
-    font-weight: bold;
-    color: #ffffff;
-}
-
-.sub-header {
-    text-align: center;
-    color: #ffffff;
-    font-size: 1.2em;
-    margin-bottom: 1.5em;
-}
-
-/* 💬 Chat Messages */
-[data-testid="stChatMessage"] {
-    background-color: #111111;
-    color: #ffffff !important;
-    border-radius: 12px;
-    padding: 12px;
-    margin-bottom: 10px;
-}
-
-/* 👤 User */
-[data-testid="stChatMessage"]:has(div[aria-label="user"]) {
-    background-color: #222222;
-    color: #ffffff !important;
-}
-
-/* 🤖 Bot */
-[data-testid="stChatMessage"]:has(div[aria-label="assistant"]) {
-    background-color: #111111;
-    color: #ffffff !important;
-}
-
-/* 🧊 Response Box */
-.response-box {
-    background-color: #111111;
-    color: #ffffff !important;
-    border: 1px solid #333333;
-    border-radius: 10px;
-    padding: 12px;
-}
-
-/* 📚 Sources */
-.sources-box {
-    background-color: #111111;
-    color: #ffffff !important;
-    border-left: 3px solid #ffffff;
-    padding: 10px;
-}
-
-/* 🧭 Sidebar */
-section[data-testid="stSidebar"] {
-    background-color: #000000;
-}
-
-/* Sidebar text */
-section[data-testid="stSidebar"] * {
-    color: #ffffff !important;
-}
-
-/* ✏️ Input */
-textarea, input {
-    background-color: #000000 !important;
-    color: #ffffff !important;
-    border: 1px solid #333333 !important;
-    border-radius: 10px !important;
-}
-
-/* Placeholder */
-textarea::placeholder {
-    color: #aaaaaa !important;
-}
-
-/* Buttons */
-button {
-    background-color: #111111 !important;
-    color: #ffffff !important;
-    border-radius: 8px;
-}
-
-/* Scrollbar */
-::-webkit-scrollbar {
-    width: 6px;
-}
-::-webkit-scrollbar-thumb {
-    background: #444;
-}
-
+    .main-header {
+        text-align: center;
+        color: #FF6B35;
+        font-size: 3em;
+        font-weight: bold;
+        margin-bottom: 0.5em;
+    }
+    .sub-header {
+        text-align: center;
+        color: #888;
+        font-size: 1.1em;
+        margin-bottom: 1.5em;
+    }
+    .response-box {
+        background-color: #1e1e1e;
+        border-left: 4px solid #FF6B35;
+        padding: 1em;
+        border-radius: 5px;
+        margin-top: 0.5em;
+    }
+    .sources-box {
+        background-color: #0d1b2a;
+        border: 1px solid #004e89;
+        padding: 0.8em;
+        border-radius: 4px;
+        margin-top: 0.5em;
+        font-size: 0.9em;
+    }
+    .sidebar-info {
+        background-color: #1e3a5f;
+        padding: 1em;
+        border-radius: 8px;
+        margin: 1em 0;
+        border-left: 4px solid #00d4ff;
+    }
 </style>
 """, unsafe_allow_html=True)
 
