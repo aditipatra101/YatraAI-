@@ -4,6 +4,8 @@ python-dotenv
 requests
 chromadb
 langchain
+langchain-community
+langchain-groq
 pydantic
 sentence-transformers
 torch
