@@ -206,41 +206,97 @@ st.set_page_config(page_title=DOMAIN_NAME, page_icon="🤖", layout="wide")
 # Custom CSS for better styling
 st.markdown("""
 <style>
-    .main-header {
-        text-align: center;
-        color: #FF6B35;
-        font-size: 3em;
-        font-weight: bold;
-        margin-bottom: 0.5em;
-    }
-    .sub-header {
-        text-align: center;
-        color: #888;
-        font-size: 1.1em;
-        margin-bottom: 1.5em;
-    }
-    .response-box {
-        background-color: #1e1e1e;
-        border-left: 4px solid #FF6B35;
-        padding: 1em;
-        border-radius: 5px;
-        margin-top: 0.5em;
-    }
-    .sources-box {
-        background-color: #0d1b2a;
-        border: 1px solid #004e89;
-        padding: 0.8em;
-        border-radius: 4px;
-        margin-top: 0.5em;
-        font-size: 0.9em;
-    }
-    .sidebar-info {
-        background-color: #1e3a5f;
-        padding: 1em;
-        border-radius: 8px;
-        margin: 1em 0;
-        border-left: 4px solid #00d4ff;
-    }
+
+/* Background */
+.stApp {
+    background: linear-gradient(135deg, #0f172a, #1e293b);
+    color: #ffffff;
+}
+
+/* Header */
+.main-header {
+    text-align: center;
+    font-size: 3.2em;
+    font-weight: 800;
+    background: linear-gradient(90deg, #ff7a18, #ffb347);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 0.2em;
+}
+
+/* Subheader */
+.sub-header {
+    text-align: center;
+    color: #cbd5e1;
+    font-size: 1.2em;
+    margin-bottom: 2em;
+}
+
+/* Chat bubbles */
+[data-testid="stChatMessage"] {
+    border-radius: 15px;
+    padding: 12px;
+    margin-bottom: 10px;
+}
+
+/* User message */
+[data-testid="stChatMessage"]:has(div[aria-label="user"]) {
+    background: #1e40af;
+    color: white;
+}
+
+/* Bot message */
+[data-testid="stChatMessage"]:has(div[aria-label="assistant"]) {
+    background: #111827;
+    border: 1px solid #374151;
+}
+
+/* Response box */
+.response-box {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    backdrop-filter: blur(10px);
+    padding: 15px;
+    border-radius: 12px;
+    margin-top: 10px;
+}
+
+/* Sidebar */
+section[data-testid="stSidebar"] {
+    background: #020617;
+}
+
+/* Sidebar cards */
+.sidebar-info {
+    background: rgba(255,255,255,0.05);
+    border-radius: 12px;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid rgba(255,255,255,0.08);
+}
+
+/* Buttons */
+button[kind="secondary"] {
+    border-radius: 10px;
+    background: #1e293b;
+    color: white;
+}
+
+/* Input box */
+textarea {
+    border-radius: 12px !important;
+    border: 1px solid #475569 !important;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 6px;
+}
+::-webkit-scrollbar-thumb {
+    background: #475569;
+    border-radius: 10px;
+}
+
 </style>
 """, unsafe_allow_html=True)
 
