@@ -6,6 +6,7 @@ import streamlit as st
 import uuid
 import os
 import re
+import chromadb as chromadb
 import time
 from typing import TypedDict, List
 from sentence_transformers import SentenceTransformer
