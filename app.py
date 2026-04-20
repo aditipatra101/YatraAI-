@@ -141,10 +141,10 @@ def load_agent_and_data():
         
         # Special handling for time-related queries
         if route == "time":
-            system_prompt = "You are the Bharat Travel Concierge. For time-related queries, provide formal and precise responses based on the provided time information."
+            system_prompt = "You are the Bharat Yatra Sahayak. For time-related queries, provide formal and precise responses based on the provided time information."
             user_msg = f"Time Information Available:\n{tool}\n\nUser Question: {state['question']}\n\nProvide a formal and precise response about the current date and time."
         else:
-            system_prompt = "You are the Bharat Travel Concierge. Answer strictly based on the provided context or tool results. If location info is missing, say you don't know. Be formal and precise in your responses."
+            system_prompt = "You are the Bharat Yatra Sahayak. Answer strictly based on the provided context or tool results. If location info is missing, say you don't know. Be formal and precise in your responses."
             user_msg = f"Context: {context}\nTool Result: {tool}\nQuestion: {state['question']}"
         
         response = llm.invoke([SystemMessage(content=system_prompt), HumanMessage(content=user_msg)])
