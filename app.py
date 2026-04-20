@@ -262,18 +262,6 @@ if "thread_id" not in st.session_state:
 
 with st.sidebar:
     st.markdown('<div class="sidebar-info">', unsafe_allow_html=True)
-    st.subheader("📋 Session Info")
-    st.write(f"**Thread ID:** `{st.session_state.thread_id}`")
-    
-    if st.button("🗑️ Clear Chat History", use_container_width=True):
-        st.session_state.messages = []
-        st.session_state.thread_id = str(uuid.uuid4())[:8]
-        st.rerun()
-    st.markdown('</div>', unsafe_allow_html=True)
-    
-    st.markdown("---")
-    
-    st.markdown('<div class="sidebar-info">', unsafe_allow_html=True)
     st.subheader("🌏 Coverage")
     st.write("**All 28 Indian States** including:")
     states_by_region = {
@@ -299,6 +287,18 @@ with st.sidebar:
     ]
     for i, prompt in enumerate(example_prompts, 1):
         st.caption(f"{i}. {prompt}")
+    st.markdown('</div>', unsafe_allow_html=True)
+    
+    st.markdown("---")
+    
+    st.markdown('<div class="sidebar-info">', unsafe_allow_html=True)
+    st.subheader("📋 Session Info")
+    st.write(f"**Thread ID:** `{st.session_state.thread_id}`")
+    
+    if st.button("🗑️ Clear Chat History", use_container_width=True):
+        st.session_state.messages = []
+        st.session_state.thread_id = str(uuid.uuid4())[:8]
+        st.rerun()
     st.markdown('</div>', unsafe_allow_html=True)
 
 # Display chat history
