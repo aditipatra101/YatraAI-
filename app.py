@@ -207,85 +207,94 @@ st.set_page_config(page_title=DOMAIN_NAME, page_icon="🤖", layout="wide")
 st.markdown("""
 <style>
 
-/* Background */
+/* 🌑 Full Black Background */
 .stApp {
-    background: linear-gradient(135deg, #0f172a, #1e293b);
+    background-color: #000000;
+    color: #ffffff;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* 🔥 Header */
+.main-header {
+    text-align: center;
+    font-size: 3em;
+    font-weight: bold;
     color: #ffffff;
 }
 
-/* Header */
-.main-header {
-    text-align: center;
-    font-size: 3.2em;
-    font-weight: 800;
-    background: linear-gradient(90deg, #ff7a18, #ffb347);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    margin-bottom: 0.2em;
-}
-
-/* Subheader */
 .sub-header {
     text-align: center;
-    color: #cbd5e1;
+    color: #ffffff;
     font-size: 1.2em;
-    margin-bottom: 2em;
+    margin-bottom: 1.5em;
 }
 
-/* Chat bubbles */
+/* 💬 Chat Messages */
 [data-testid="stChatMessage"] {
-    border-radius: 15px;
+    background-color: #111111;
+    color: #ffffff !important;
+    border-radius: 12px;
     padding: 12px;
     margin-bottom: 10px;
 }
 
-/* User message */
+/* 👤 User */
 [data-testid="stChatMessage"]:has(div[aria-label="user"]) {
-    background: #1e40af;
-    color: white;
+    background-color: #222222;
+    color: #ffffff !important;
 }
 
-/* Bot message */
+/* 🤖 Bot */
 [data-testid="stChatMessage"]:has(div[aria-label="assistant"]) {
-    background: #111827;
-    border: 1px solid #374151;
+    background-color: #111111;
+    color: #ffffff !important;
 }
 
-/* Response box */
+/* 🧊 Response Box */
 .response-box {
-    background: rgba(255,255,255,0.05);
-    border: 1px solid rgba(255,255,255,0.1);
-    backdrop-filter: blur(10px);
-    padding: 15px;
-    border-radius: 12px;
-    margin-top: 10px;
-}
-
-/* Sidebar */
-section[data-testid="stSidebar"] {
-    background: #020617;
-}
-
-/* Sidebar cards */
-.sidebar-info {
-    background: rgba(255,255,255,0.05);
-    border-radius: 12px;
+    background-color: #111111;
+    color: #ffffff !important;
+    border: 1px solid #333333;
+    border-radius: 10px;
     padding: 12px;
-    margin-bottom: 15px;
-    border: 1px solid rgba(255,255,255,0.08);
+}
+
+/* 📚 Sources */
+.sources-box {
+    background-color: #111111;
+    color: #ffffff !important;
+    border-left: 3px solid #ffffff;
+    padding: 10px;
+}
+
+/* 🧭 Sidebar */
+section[data-testid="stSidebar"] {
+    background-color: #000000;
+}
+
+/* Sidebar text */
+section[data-testid="stSidebar"] * {
+    color: #ffffff !important;
+}
+
+/* ✏️ Input */
+textarea, input {
+    background-color: #000000 !important;
+    color: #ffffff !important;
+    border: 1px solid #333333 !important;
+    border-radius: 10px !important;
+}
+
+/* Placeholder */
+textarea::placeholder {
+    color: #aaaaaa !important;
 }
 
 /* Buttons */
-button[kind="secondary"] {
-    border-radius: 10px;
-    background: #1e293b;
-    color: white;
-}
-
-/* Input box */
-textarea {
-    border-radius: 12px !important;
-    border: 1px solid #475569 !important;
+button {
+    background-color: #111111 !important;
+    color: #ffffff !important;
+    border-radius: 8px;
 }
 
 /* Scrollbar */
@@ -293,8 +302,7 @@ textarea {
     width: 6px;
 }
 ::-webkit-scrollbar-thumb {
-    background: #475569;
-    border-radius: 10px;
+    background: #444;
 }
 
 </style>
