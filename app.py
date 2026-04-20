@@ -220,11 +220,12 @@ st.markdown("""
         margin-bottom: 1.5em;
     }
     .response-box {
-        background-color: #1e1e1e;
-        border-left: 4px solid #FF6B35;
-        padding: 1em;
-        border-radius: 5px;
-        margin-top: 0.5em;
+    background-color: #ffffff;   /* white background */
+    color: #000000 !important;   /* black text */
+    border-left: 4px solid #FF6B35;
+    padding: 1em;
+    border-radius: 5px;
+    margin-top: 0.5em;
     }
     .sources-box {
         background-color: #0d1b2a;
