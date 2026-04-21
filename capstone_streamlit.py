@@ -348,3 +348,5 @@ if prompt := st.chat_input("Ask me about destinations, budgets, best times to vi
                 else:
                     st.error(f"❌ Error: {error_msg}")
                     st.info("💡 Tip: Try rephrasing your question about Indian travel destinations or budgets.")
+                    
+# https://yatraai-chatbot.streamlit.app/ - is the link of my deployed streamlit app. You can ask questions related to travel destinations and budgets in India, and the agent will respond based on the knowledge base and tool calculations we've set up!
