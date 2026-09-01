@@ -39,7 +39,8 @@ class CapstoneState(TypedDict):
 @st.cache_resource
 def load_agent_and_data():
     # Use 8b model to avoid the 429 RateLimit errors you saw earlier
-    llm = ChatGroq(model="llama-3.3-70b-versatile", temperature=0)
+    # ✅ CORRECTED LINE 34
+llm = ChatGroq(model="llama-3.3-70b-versatile", groq_api_key=os.getenv("GROQ_API_KEY"), temperature=0)
     embedder = SentenceTransformer("all-MiniLM-L6-v2")
     
     # Initialize ChromaDB
