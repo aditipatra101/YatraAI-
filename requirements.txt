@@ -4,9 +4,7 @@ python-dotenv
 requests
 chromadb
 langchain
-langchain-community
-langchain-groq
 pydantic
+langgraph
+langchain-groq
 sentence-transformers
-torch
-protobuf==4.25.3
