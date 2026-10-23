@@ -39,14 +39,25 @@ class CapstoneState(TypedDict):
     eval_retries: int
 
 # ── 2. Load Models & Knowledge Base (Cached) ──────────────
-@st.cache_resource
-def load_agent_and_data():
-    # Use 8b model to avoid the 429 RateLimit errors you saw earlier
-    llm = ChatGroq(model="llama3-70b-8192",groq_api_key=os.getenv("GROQ_API_KEY"),temperature=0)
-    embedder = SentenceTransformer("all-MiniLM-L6-v2")
+    @st.cache_resource
+    def load_agent_and_data():
+        # Fetch API key safely from environment variables or Streamlit Secrets
+        groq_api_key = os.getenv("GROQ_API_KEY")
+        if not groq_api_key and "GROQ_API_KEY" in st.secrets:
+            groq_api_key = st.secrets["GROQ_API_KEY"]
     
-    # Initialize ChromaDB
-    client = chromadb.Client()
+        llm = ChatGroq(
+            model_name="llama-3.1-8b-instant",
+            groq_api_key=groq_api_key,
+            temperature=0
+        )
+        
+        # Initialize sentence transformer embedder
+        embedder = SentenceTransformer("all-MiniLM-L6-v2")
+        
+        # Initialize ChromaDB
+        client = chromadb.Client()
+        
     try: client.delete_collection("capstone_kb")
     except: pass
     collection = client.create_collection("capstone_kb")
