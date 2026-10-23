@@ -11,6 +11,9 @@ import time
 from datetime import datetime
 from dotenv import load_dotenv
 
+# Retrieve API key from Streamlit Secrets or Environment Variable
+groq_api_key = st.secrets.get("GROQ_API_KEY") or os.getenv("GROQ_API_KEY")
+
 # Load environment variables from .env file
 load_dotenv()
 from typing import TypedDict, List
